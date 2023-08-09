@@ -1,0 +1,202 @@
+/* global styles */
+/* ------------------------------------------- */
+html{
+    box-sizing: border-box;
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+/* upto here it is common for every css file */
+body{
+    color: rgb(18, 17, 17);
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+img{
+    width: 1200;
+    height: 120px;
+}
+a{
+    color: #ffe660; ;
+}
+a:hover{
+    /* by using this property when we go to the link 
+    the link under the link goes off  */
+    text-decoration: none;
+}
+h2{
+    
+    font-size: 45px;
+}
+h1{
+    font-size: 100px;
+    line-height: 1;
+}
+h1,h2{
+    font-family: 'Caveat Brush', cursive;
+    font-weight: 400;
+    margin: 0;
+    
+}
+h3{
+    margin-bottom: 0;
+}
+.content-wrap{
+    /* by using max width the website is automatically set as per the view port size */
+    max-width: 800px;
+    /* leaves a bit border around and dont spread among the whole page */
+    width: 85%;
+    margin: 0 auto;
+    padding: 60px,0;
+}
+.item-details h3 + p{
+    font-style: italic;
+   
+}
+.item-details h3 ~ p{
+    /* margin used to remove space between lines */
+    margin: 0;
+}
+.divider > section{
+    border-bottom: 1px dashesd gray;
+    padding:25px 0;
+}
+.divider > section:last-of-type{
+    border-bottom: none;
+}
+
+
+/* portfolio*/
+/* ------------------------------------------- */
+
+header{
+    background-color: darkblue;
+    color: whitesmoke;
+    
+}
+
+
+/* projects */
+/* ------------------------------------------- */
+.projects{
+background-color: #F7FFF7 ;
+ 
+}
+.projects a{
+}
+.projects .btn{
+    color: #F7FFF7;
+    background-color:  darkblue;
+    text-decoration: none;
+    padding: 8px; 
+    /* bigger the border raduis no the more rounded the border becomes */
+    border-radius: 4px;
+    display: inline-block;
+}
+ .projects .btn:hover{
+    /* the last value here defines the opacity i.e makes it a bit transparent */
+    background-color: hsl(240, 100%, 27%,80%);
+}
+.project-item{
+    /* sets the image ans text borders */
+    overflow: hidden;
+    
+
+}
+
+.project-item h3{
+    margin-top: 0;
+    text-decoration:  black solid;
+
+}
+/* work experience
+---------------------------------------------- */
+.work-experience{
+    background-color:#A1c6d7 ;
+}
+
+.job-details{
+
+       
+}
+.job-summary{
+
+}
+
+
+
+/* education */
+/* ------------------------------------------- */
+.education{
+    /* doubt image not added check it */
+    /*  */
+    /*  */
+    background-image: url("C:\Users\BHOOMIKA ATIPAMULA\OneDrive\Desktop\Excercise files linkedin courses\excercise files of FSWD\css\Ex_Files_CSS_EssT\Exercise Files\Ch8\08_07\css-portfolio\images\joanna-kosinska-unsplash.jpg");
+    background-size: cover;
+    background-position: top right;
+    padding-bottom: 100px;
+}
+.education p{
+    width: 60%;
+}
+
+/* contact info */
+/* ------------------------------------------- */
+footer{
+    background-color: rgb(18, 17, 17) ;
+    color: whitesmoke;
+   
+}
+.contact-list{
+    list-style-type:none ;
+    padding: 0;
+  
+}
+.contact-list a{
+    padding: 15px;
+    display: inline-block;
+}
+/* Responsive */
+/* ------------------------------------------- */
+/* for larger screen size */
+@media screen and (min-width:750px){
+    .project-item img{
+        /* makes the text appear next to the image */
+        float: left;
+        margin-right: 20px;
+    }
+    .job-item{
+        display: grid;
+        /* makes columns here i.e displays text side by side */
+        grid-template-columns:1fr 2fr ;
+        /* adding gap between columns i.e gutter gap */
+        column-gap: 20px;
+    }
+    header,footer{
+        text-align: center;
+    }
+    .contact-list{
+      /* makes the elements side by side of a list */
+        display: flex;
+    /* equal space is distributed among elements */
+         justify-content:center; 
+    }
+}
+/* for smaller screen size */
+@media screen and (max-width:749px){
+    h1{
+        font-size: 75px;
+        line-height: 0.9;
+        margin-bottom: 20px;
+    }
+    h2{
+        line-height: 1;
+    }
+    .contact-list a{
+        padding: 5px;
+    }
+}
